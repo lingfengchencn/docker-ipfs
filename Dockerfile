@@ -1,0 +1,13 @@
+FROM  ipfs/go-ipfs
+
+#ENV IPFS_GATEWAY_ADDR=/ip4/0.0.0.0/tcp/8080
+#ENV IPFS_API_ADDR=/ip4/0.0.0.0/tcp/5001
+ENV GATEWAY_PORT=8080 \
+    API_PORT=5001 \
+    IPFS_LOGGING=info
+
+VOLUME /data/ipfs/
+
+WORKDIR /data/ipfs/
+
+EXPOSE 8080 5001
